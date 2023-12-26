@@ -15,9 +15,10 @@ class MessageRepositoryMemory: MessageRepository {
         return messageList
     }
 
-    override fun save(message: Message) {
+    override fun save(message: Message): Message {
         message.id = ++index
         messageList.add(message)
+        return message
     }
 
     override fun getById(id: Long): Message? {

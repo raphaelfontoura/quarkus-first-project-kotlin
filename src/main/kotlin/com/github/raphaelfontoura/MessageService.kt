@@ -14,8 +14,8 @@ class MessageService(
         return repository.getAll()
     }
 
-    fun save(message: Message) {
-        repository.save(message)
+    fun save(message: Message): Message {
+        return repository.save(message)
     }
 
     fun getOneById(id: Long): Message {
